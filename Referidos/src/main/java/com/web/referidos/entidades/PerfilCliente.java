@@ -1,18 +1,44 @@
 package com.web.referidos.entidades;
 
-import javax.persistence.Column;
+import java.util.Date;
+
+
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+
 import javax.persistence.Table;
 
 @Entity
-@Table (name = "PerfilCliente") 
-public class PerfilCliente {
+@Table (name = "perfilCliente") 
+public class PerfilCliente extends Usuario{
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY) 
-	@Column(name = "id")
-	private int id;
+	/**
+	 * 
+	 */
+	public PerfilCliente() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @param nombre
+	 * @param apellido
+	 * @param mail
+	 * @param clave
+	 * @param direccion
+	 * @param numeracion
+	 * @param zona
+	 * @param foto
+	 * @param alta
+	 * @param baja
+	 */
+	public PerfilCliente(String nombre, String apellido, String mail, String clave, String direccion, String numeracion,
+			Zona zona, Foto foto, Date alta, Date baja) {
+		super(nombre, apellido, mail, clave, direccion, numeracion, zona, foto, alta, baja);
+		// TODO Auto-generated constructor stub
+	}
+
+	
+	
+	
+	
 }
