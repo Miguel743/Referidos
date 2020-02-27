@@ -4,17 +4,25 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.MappedSuperclass;
 import javax.persistence.OneToOne;
-import javax.persistence.Table;
+
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-@Entity
-@Table (name = "usuario") 
-public class Usuario extends Base{
+
+@MappedSuperclass
+public class Usuario{
 	
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY) 
+	@Column(name = "id")
+	private int id;
 	
 	@Column(name = "nombre")
 	private String nombre;
@@ -24,9 +32,11 @@ public class Usuario extends Base{
     private String mail;
 	@Column(name = "clave")
     private String clave;
+	@Column(name = "direccion")
+	private String direccion;
+	@Column(name = "numeracion")
+	private String numeracion;
 	
-	@OneToOne
-    private Domicilio domicilio;
 	
     @ManyToOne
     private Zona zona;
@@ -53,7 +63,7 @@ public class Usuario extends Base{
 	 * @param baja
 	 */
     
-	public Usuario(String nombre, String apellido, String mail, String clave, Domicilio domicilio, Zona zona,
+	public Usuario(String nombre, String apellido, String mail, String clave, String direccion,String numeracion, Zona zona,
 			Foto foto, Date alta, Date baja) {
 		
 		
@@ -61,12 +71,22 @@ public class Usuario extends Base{
 		this.apellido = apellido;
 		this.mail = mail;
 		this.clave = clave;
-		this.domicilio = domicilio;
+		this.direccion = direccion;
+		this.numeracion = numeracion;
 		this.zona = zona;
 		this.foto = foto;
 		this.alta = alta;
 		this.baja = baja;
 	}
+
+	
+	/**
+	 * 
+	 */
+	public Usuario() {
+		
+	}
+
 
 	public String getNombre() {
 		return nombre;
@@ -100,13 +120,37 @@ public class Usuario extends Base{
 		this.clave = clave;
 	}
 
-	public Domicilio getDomicilio() {
-		return domicilio;
+	
+
+	public int getId() {
+		return id;
 	}
 
-	public void setDomicilio(Domicilio domicilio) {
-		this.domicilio = domicilio;
+
+	public void setId(int id) {
+		this.id = id;
 	}
+
+
+	public String getDireccion() {
+		return direccion;
+	}
+
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+
+
+	public String getNumeracion() {
+		return numeracion;
+	}
+
+
+	public void setNumeracion(String numeracion) {
+		this.numeracion = numeracion;
+	}
+
 
 	public Zona getZona() {
 		return zona;
