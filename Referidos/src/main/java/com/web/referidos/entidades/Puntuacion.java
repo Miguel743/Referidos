@@ -19,6 +19,7 @@ public class Puntuacion {
 	private int precio;
 	private int calidad;
 	private int tiempo;
+	
 	public int getId() {
 		return id;
 	}
@@ -50,7 +51,6 @@ public class Puntuacion {
 	 * @param tiempo
 	 */
 	public Puntuacion(int id, int precio, int calidad, int tiempo) {
-		super();
 		this.id = id;
 		this.precio = precio;
 		this.calidad = calidad;
