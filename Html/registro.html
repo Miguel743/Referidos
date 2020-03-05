@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Registro</title>
+    <link rel="shortcut icon" href="img/icono.png" type="image/x-icon">
+    <!--para el checkbox-->
+    <script type="text/javascript">
+        function showContent() {
+            element = document.getElementById("content");
+            check = document.getElementById("check");
+            if (check.checked) {
+                element.style.display = 'block';
+            } else {
+                element.style.display = 'none';
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!--FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<scriptsrc="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
+</head>
+<header>
+    <img alt="Referidos" class="referidos-logo" src="img/logo1.png">
+</header>
+<body>
+
+    <form name="formulario">
+    <section class="form-register">
+        <h4>Crea tu cuenta</h4>
+        <input class="controls" type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+        <input class="controls" type="text" name="apellido" id="apellido" placeholder="Apellido" required>
+        <input class="controls" type="email" name="correo" id="correo" placeholder="Email" required>
+        <input class="controls" type="text" name="provincia" id="provincia" placeholder="Provincia">
+        <input class="controls" type="text" name="localidad" id="localidad" placeholder="Localidad">
+        <input class="controls" type="password" name="contraseña1" id="contraseña1" placeholder="Contraseña" required>
+        <input class="controls" type="password" name="contraseña2" id="contraseña2" placeholder="Confirmar contraseña" required>
+        <div>
+            <input class="checkbox" type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()" />
+            <b class="check">Quiero ofrecer mis servicios</b>
+            
+        </div>
+        <div  id="content" style="display: none;">
+            <input class="controls" type="text" name="rubro" id="rubro" placeholder="Rubro">
+            <input class="controls" type="text" name="cuit" id="cuit" placeholder="Cuit">
+            <input class="controls" type="text" name="contacto" id="contacto" placeholder="Número de contacto">
+            
+
+        </div>
+        <input type="checkbox" class="checkbox" value="1" name="acepto" onclick="registrar.disabled = !this.checked" >
+        <b class="check">Estoy de acuerdo con los
+            <span data-tooltip="Aca van los terminos y condiciones que se aceptan lalalalalal alalalalalalalla lala va para arriba ahr lalala ohhh">Terminos y condiciones</span>
+
+        </b>
+        <div>
+        <input class="botons" type="submit" value="Registrar" name="registrar" disabled>
+        </div>
+        <p><a href="#">Ya tengo una cuenta</a></p>
+         
+    </section>
+    </form>
+
+</body>
+
+</html>

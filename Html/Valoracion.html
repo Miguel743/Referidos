@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicaciones</title>
+    <link rel="shortcut icon" href="img/icono.png" type="image/x-icon">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/all.min.css">
+    <script src="js/all.js"></script>
+
+    <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="navbar-toggler-icon"></span>
+        </button> <a class="navbar-brand" href="index.html">Referidos</a>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="navbar-nav ml-md-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Cerrar sesión <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+
+<body>
+
+    <div class="container main-secction">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 image-section">
+                <img style="object-fit: cover;  object-position: 0% 50%;" src="img/fondoPerfil.jpg">
+            </div>
+            <div class="row user-left-part">
+                <div class="col-md-3 col-sm-3 col-xs-12 user-profil-part pull-left">
+                    <div class="row ">
+                        <div class="col-md-12 col-md-12-sm-12 col-xs-12 user-image text-center" style="margin-top: 80px;">
+                            <img src="img/cara.jpg" class="rounded-circle">
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 user-detail-section1 text-center">
+                            <button id="btn-contact" (click)="clearModal()" data-toggle="modal" data-target="#contact"
+                                class="btn btn-success btn-block follow">Contactarme</button>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-12 pull-right profile-right-section">
+                    <div class="row profile-right-section-row">
+                        <div class="col-md-12 profile-header">
+                            <div class="row">
+                                <div class="col-md-8 col-sm-6 col-xs-6 profile-header-section1 pull-left">
+                                    <h1>Juan Perez</h1>
+                                    <h5>Rubro/s</h5>
+                                </div>
+
+
+                                <div class="col-md-4 col-sm-6 col-xs-6 profile-header-section1 text-right pull-rigth">
+                                    <a href="#" class="btn btn-primary btn-block">Seguir buscando</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="rating-block">
+                                        <h4>Promedio</h4>
+                                        <h2 class="bold padding-bottom-7">4.3 <small>/ 3</small></h2>
+                                        <button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+                                            <span class="fas fa-star" aria-hidden="true"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+                                            <span class="fas fa-star" aria-hidden="true"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+                                            <span class="fas fa-star" aria-hidden="true"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-default btn-grey btn-sm"
+                                            aria-label="Left Align">
+                                            <span class="fas fa-star" aria-hidden="true"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-default btn-grey btn-sm"
+                                            aria-label="Left Align">
+                                            <span class="fas fa-star" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <h4>Valoracion</h4>
+                                    <div class="pull-left">
+                                        <div class="pull-left" style="width:35px; line-height:1;">
+                                            <div style="height:9px; margin:5px 0;">Servicio <span
+                                                    class="glyphicon glyphicon-star"></span></div>
+                                        </div>
+                                        <div class="pull-left" style="width:180px;">
+                                            <div class="progress" style="height:9px; margin:8px 0;">
+                                                <div class="progress-bar progress-bar-success" role="progressbar"
+                                                    aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"
+                                                    style="width: 1000%">
+                                                    <span class="sr-only">80% Complete (danger)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pull-right" style="margin-left:10px;">1</div>
+                                    </div>
+                                    <div class="pull-left">
+                                        <div class="pull-left" style="width:35px; line-height:1;">
+                                            <div style="height:9px; margin:5px 0;">Costo <span
+                                                    class="glyphicon glyphicon-star"></span></div>
+                                        </div>
+                                        <div class="pull-left" style="width:180px;">
+                                            <div class="progress" style="height:9px; margin:8px 0;">
+                                                <div class="progress-bar progress-bar-primary" role="progressbar"
+                                                    aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"
+                                                    style="width: 50%">
+                                                    <span class="sr-only">80% Complete (danger)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pull-right" style="margin-left:10px;">1</div>
+                                    </div>
+                                    <div class="pull-left">
+                                        <div class="pull-left" style="width:35px; line-height:1;">
+                                            <div style="height:9px; margin:5px 0;">Tiempo <span
+                                                    class="glyphicon glyphicon-star"></span></div>
+                                        </div>
+                                        <div class="pull-left" style="width:180px;">
+                                            <div class="progress" style="height:9px; margin:8px 0;">
+                                                <div class="progress-bar progress-bar-info" role="progressbar"
+                                                    aria-valuenow="3" aria-valuemin="0" aria-valuemax="5"
+                                                    style="width: 60%">
+                                                    <span class="sr-only">80% Complete (danger)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pull-right" style="margin-left:10px;">0</div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#profile" role="tab" data-toggle="tab"><i
+                                                    class="fas fa-info-circle"></i> Descripcion</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#buzz" role="tab" data-toggle="tab"><i
+                                                    class="fas fa-comment"></i> Comentarios y valoraciones</a>
+                                        </li>
+                                    </ul>
+
+                                    <!-- Tab panes -->
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane fade show active" id="profile">
+
+                                            <div class="row container">
+                                                <div class="col-md-10">
+                                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime,
+                                                        dignissimos laborum ipsa debitis hic, magni ad eum quaerat
+                                                        necessitatibus tempore perferendis officia doloribus architecto
+                                                        ullam non alias. Veritatis, officia eum?
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane fade" id="buzz">
+
+                                            <div class="col-md-12 col-sm-12 col-xs-12 user-detail-section1 text-center">
+                                                <button id="btn-contact" (click)="clearModal()" data-toggle="modal"
+                                                    data-target="#voto" class="btn btn-success btn-block follow"> <i
+                                                        class="fas fa-pencil-alt"></i> Escribir una opinion</button>
+
+                                            </div>
+
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-sm-9">
+                                                        <hr />
+                                                        <div class="review-block">
+                                                            <div class="row">
+                                                                <div class="col-sm-3">
+                                                                    <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image"
+                                                                        class="img-rounded">
+                                                                    <div class="review-block-name"><a
+                                                                            href="#">nktailor</a></div>
+                                                                    <div class="review-block-date">January 29,
+                                                                        2016<br />1 day ago</div>
+                                                                </div>
+                                                                <div class="col-sm-9">
+                                                                    <div class="review-block-rate">
+                                                                        <button type="button"
+                                                                            class="btn btn-warning btn-xs"
+                                                                            aria-label="Left Align">
+                                                                            <span class="fas fa-star"
+                                                                                aria-hidden="true"></span>
+                                                                        </button>
+                                                                        <button type="button"
+                                                                            class="btn btn-warning btn-xs"
+                                                                            aria-label="Left Align">
+                                                                            <span class="fas fa-star"
+                                                                                aria-hidden="true"></span>
+                                                                        </button>
+                                                                        <button type="button"
+                                                                            class="btn btn-warning btn-xs"
+                                                                            aria-label="Left Align">
+                                                                            <span class="fas fa-star"
+                                                                                aria-hidden="true"></span>
+                                                                        </button>
+                                                                        <button type="button"
+                                                                            class="btn btn-default btn-grey btn-xs"
+                                                                            aria-label="Left Align">
+                                                                            <span class="fas fa-star"
+                                                                                aria-hidden="true"></span>
+                                                                        </button>
+                                                                        <button type="button"
+                                                                            class="btn btn-default btn-grey btn-xs"
+                                                                            aria-label="Left Align">
+                                                                            <span class="fas fa-star"
+                                                                                aria-hidden="true"></span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="review-block-title">this was nice in buy
+                                                                    </div>
+                                                                    <div class="review-block-description">this was nice
+                                                                        in buy. this was nice in buy. this was nice in
+                                                                        buy. this was nice in buy this was nice in buy
+                                                                        this was nice in buy this was nice in buy this
+                                                                        was nice in buy</div>
+                                                                </div>
+                                                            </div>
+                                                            <hr />
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="voto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="voto">Valorar y comentar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        
+                        <div class="form-group green-border-focus">
+                            <label for="exampleFormControlTextarea5"><h5>Añadir un comentario</h5></label>
+                            <textarea class="form-control"  id="exampleFormControlTextarea5" rows="4"></textarea>
+                          </div>
+                        <div class="text-center margen-avatar">
+                            <img src="img/Usuario.png" class="rounded-circle border" width="100px">
+
+                        </div>
+                    </div>
+
+                    <!-- Estrellas-->
+
+                    <br>
+                    <div class="rat">
+                        <div class="stars">
+                            <form action="">
+                                <input type="radio" class="star star-a5" id="star-a5" name="star">
+                                <label for="star-a5" class="star star-a5"></label>
+
+                                <input type="radio" class="star star-a4" id="star-a4" name="star">
+                                <label for="star-a4" class="star star-a4"></label>
+
+                                <input type="radio" class="star star-a3" id="star-a3" name="star">
+                                <label for="star-a3" class="star star-a3"></label>
+
+                                <input type="radio" class="star star-a2" id="star-a2" name="star">
+                                <label for="star-a2" class="star star-a2"></label>
+
+                                <input type="radio" class="star star-a1" id="star-a1" name="star">
+                                <label for="star-a1" class="star star-a1"></label>
+
+                            </form>
+                        </div>
+                        <p class="texto">Calidad</p>
+
+                        <div class="stars">
+                            <form action="">
+                                <input type="radio" class="star star-b5" id="star-b5" name="star">
+                                <label for="star-b5" class="star star-b5"></label>
+
+                                <input type="radio" class="star star-b4" id="star-b4" name="star">
+                                <label for="star-b4" class="star star-b4"></label>
+
+                                <input type="radio" class="star star-b3" id="star-b3" name="star">
+                                <label for="star-b3" class="star star-b3"></label>
+
+                                <input type="radio" class="star star-b2" id="star-b2" name="star">
+                                <label for="star-b2" class="star star-b2"></label>
+
+                                <input type="radio" class="star star-b1" id="star-b1" name="star">
+                                <label for="star-b1" class="star star-b1"></label>
+
+                            </form>
+                        </div>
+                        <p>Tiempo</p>
+
+                        <div class="stars">
+                            <form action="">
+                                <input type="radio" class="star star-c5" id="star-c5" name="star">
+                                <label for="star-c5" class="star star-c5"></label>
+
+                                <input type="radio" class="star star-c4" id="star-c4" name="star">
+                                <label for="star-c4" class="star star-c4"></label>
+
+                                <input type="radio" class="star star-c3" id="star-c3" name="star">
+                                <label for="star-c3" class="star star-c3"></label>
+
+                                <input type="radio" class="star star-c2" id="star-c2" name="star">
+                                <label for="star-c2" class="star star-c2"></label>
+
+                                <input type="radio" class="star star-c1" id="star-c1" name="star">
+                                <label for="star-c1" class="star star-c1"></label>
+
+                            </form>
+                        </div>
+                        <p>Costo</p>
+                    </div>
+                    
+
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" (click)="openModal()"
+                        data-dismiss="modal">Valorar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contact">Contactarme</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <p for="msj">Se enviará este mensaje a la persona que desea contactar, indicando que te quieres comunicar con el. Para esto debes de ingresar tu información personal.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtFullname">Nombre completo</label>
+                        <input type="text" id="txtFullname" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtEmail">Email</label>
+                        <input type="text" id="txtEmail" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtPhone">Teléfono</label>
+                        <input type="text" id="txtPhone" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" (click)="openModal()" data-dismiss="modal">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>
